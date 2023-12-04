@@ -7,7 +7,7 @@
 * */
 
 
-
+package Encapsulation;
 class Student {
     int age;     // instance variable , Data members , fields
     String name; // properties
