@@ -40,7 +40,7 @@ class Student {
     }
 
     void setCity(String city){
-        city1 = city;
+        this.city1 = city;
     }
 
     String getCity(){
@@ -99,5 +99,18 @@ public class Main {
         /* Here the problem is reduced because of the use of this keyword */
 
         System.out.println(st.isMarried());
+
+        st.setCity("kathmandu");
+        System.out.println(st.getCity());
+
+
+        // multiple objects
+
+        Student student1 = new Student();
+        student1.setRollNo(39);
+        System.out.println(student1.getRollNo());
+
+        student1.setCity("lalitpur");
+        System.out.println(student1.getCity());
     }
 }
