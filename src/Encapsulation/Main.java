@@ -87,6 +87,29 @@ class Student {
         return marriage;
     }
 
+    //setter can be used commonly
+
+    private int age2;
+    private String name2;
+    private String city2;
+
+    //using setter commonly
+    public void getData(int age,String name,String city){
+        this.age2=age;
+        this.name2=name;
+        this.city2=city;
+    }
+    public int getAge2() {
+        return age2;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public String getCity2() {
+        return city2;
+    }
 }
 
 
@@ -150,5 +173,11 @@ public class Main {
 
         student1.setLang1("c++");
         System.out.println(student1.getLang1());
+
+        //new object
+        Student str2 = new Student();
+        str2.getData(17,"sohan", "Tokha");
+        System.out.println(str2.getName2()+" " + str2.getAge2()+ " " + str2.getCity2());
+
     }
 }
