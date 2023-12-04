@@ -19,6 +19,24 @@ class Student {
     private int clas;
     private int rollNo;
     private boolean marriage;
+    private String lang;
+    private String lang1;
+
+    public String getLang1() {
+        return lang1;
+    }
+
+    public void setLang1(String lang1) {
+        this.lang1 = lang1;
+    }
+
+    public String getLang() {
+        return lang;
+    }
+
+    public void setLang(String lang) {
+        lang = lang;
+    }
 
     void setAge(int a){     // setter  (setVariable)
         if(a>0){
@@ -90,7 +108,7 @@ public class Main {
         st.setClas(10);
         System.out.println("Your class is: "+st.getClas());
 
-        /* The result is we get "0" for int and "null" for String because of SHadowing PROBLEM
+        /* The result is we get "0" for int and "null" for String because of Shadowing PROBLEM
         * To Solve this we need to add "this" keyword in class
         * */
 
@@ -103,8 +121,22 @@ public class Main {
         st.setCity("kathmandu");
         System.out.println(st.getCity());
 
+        /* Since there is conflict we cannot assign same local variable to instance variable
+        * So we must use this keyword to assign the running variable
+        * "running variable means the instance variable */
+
+        st.setLang("java");
+        System.out.println(st.getLang());
+        // this is the result with this keyword.
+        // here we didn't get any null value.
+
+        st.setLang1("Java");
+        System.out.println(st.getLang1());
+
+        System.out.println();
 
         // multiple objects
+
 
         Student student1 = new Student();
         student1.setRollNo(39);
@@ -112,5 +144,11 @@ public class Main {
 
         student1.setCity("lalitpur");
         System.out.println(student1.getCity());
+
+        student1.setLang("c++");
+        System.out.println(student1.getLang());
+
+        student1.setLang1("c++");
+        System.out.println(student1.getLang1());
     }
 }
