@@ -34,6 +34,17 @@ class Student1 {
         age=17;
     }
 
+    Student1(int age){
+        this("gohan");
+
+        /* it goes to constructor that has String on its parameter
+        saying that it goes to upper constructor */
+
+        city="Bhaktapur";
+        this.age=age;
+    }
+
+
     public String getName() {
         return name;
     }
@@ -62,8 +73,10 @@ public class testConstructors {
 
         /*Constructor overloading solutions */
 
-
         Student1 str2 = new Student1("mohan");
         System.out.println(str2.getName()+" "+ str2.getAge()+" "+str2.getCity());
+
+        Student1 str3 = new Student1(20);
+        System.out.println(str3.getName()+" "+ str3.getAge()+" "+str3.getCity());
     }
 }
