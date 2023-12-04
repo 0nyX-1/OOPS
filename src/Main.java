@@ -61,6 +61,7 @@ class Student {
     int getRollNo(){
         return rollNo;
     }
+    int name2;
 
 }
 
@@ -69,7 +70,7 @@ public class Main {
     public static void main(String[] args) {
         Student st = new Student();
         st.age=17;               // This method is not good !!!! Because other is using this.
-        st.name="SOhan";          // There is not security since any can use.
+        st.name="SOhan";          // There is no security since any can use.
         st.city="basundhara";     // To ensure this we have to use "private" keyword !s
          // st.age1; // cant access error!!
 
