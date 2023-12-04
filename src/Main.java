@@ -18,6 +18,7 @@ class Student {
     private String city1;
     private int clas;
     private int rollNo;
+    private boolean marriage;
 
     void setAge(int a){     // setter  (setVariable)
         if(a>0){
@@ -62,7 +63,11 @@ class Student {
     int getRollNo(){
         return rollNo;
     }
-    int name2;
+
+    /* Recommendation for boolean is to use isVariable */
+    public boolean isMarried(){
+        return marriage;
+    }
 
 }
 
@@ -92,5 +97,7 @@ public class Main {
         st.setRollNo(37);
         System.out.println(st.getRollNo());
         /* Here the problem is reduced because of the use of this keyword */
+
+        System.out.println(st.isMarried());
     }
 }
