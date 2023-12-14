@@ -38,7 +38,8 @@ class Student1 {
         this("gohan");
 
         /* it goes to constructor that has String on its parameter
-        saying that it goes to upper constructor */
+        saying that it goes to upper constructor
+        This is known as constructor chaining*/
 
         city="Bhaktapur";
         this.age=age;
@@ -55,6 +56,27 @@ class Student1 {
 
     public int getAge() {
         return age;
+    }
+}
+
+class Dog{
+    private String name;
+    private int cost;
+
+    public Dog(){
+        this("Tommy" , 10000);
+    }
+    public Dog(String name, int cost){
+        this.name=name;
+        this.cost=cost;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCost() {
+        return cost;
     }
 }
 
@@ -78,5 +100,11 @@ public class testConstructors {
 
         Student1 str3 = new Student1(20);
         System.out.println(str3.getName()+" "+ str3.getAge()+" "+str3.getCity());
+
+        Dog d1 = new Dog();
+        System.out.println(d1.getName() +" " + "The cost of this dog is: "+ d1.getCost());
+
+        Dog d2 = new Dog("germanShephard", 50000);
+        System.out.println(d2.getName() +" " + "The cost of this dog is: "+ d2.getCost());
     }
 }
